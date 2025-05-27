@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cloudinary Tag Gallery</title>
+  <style>
+    html {
+      height: 100%;
+      background: radial-gradient(ellipse at bottom, #5091DD 0%, #030617 100%);
+    }
+
+    #grid {
+      width: 100%;
+      height: 1px;
+      box-shadow: 0px 0px #030617, 0px 3px #030617, 0px 6px #030617, 0px 9px #030617, 0px 12px #030617, 0px 15px #030617, 0px 18px #030617, 0px 21px #030617, 0px 24px #030617, 0px 27px #030617, 0px 30px #030617, 0px 33px #030617, 0px 36px #030617, 0px 39px #030617, 0px 42px #030617, 0px 45px #030617, 0px 48px #030617, 0px 51px #030617, 0px 54px #030617, 0px 57px #030617, 0px 60px #030617, 0px 63px #030617, 0px 66px #030617, 0px 69px #030617, 0px 72px #030617, 0px 75px #030617, 0px 78px #030617, 0px 81px #030617, 0px 84px #030617, 0px 87px #030617, 0px 90px #030617, 0px 93px #030617, 0px 96px #030617, 0px 99px #030617, 0px 102px #030617, 0px 105px #030617, 0px 108px #030617, 0px 111px #030617, 0px 114px #030617, 0px 117px #030617, 0px 120px #030617, 0px 123px #030617, 0px 126px #030617, 0px 129px #030617, 0px 132px #030617, 0px 135px #030617, 0px 138px #030617, 0px 141px #030617, 0px 144px #030617, 0px 147px #030617, 0px 150px #030617, 0px 153px #030617, 0px 156px #030617, 0px 159px #030617, 0px 162px #030617, 0px 165px #030617, 0px 168px #030617, 0px 171px #030617, 0px 174px #030617, 0px 177px #030617, 0px 180px #030617, 0px 183px #030617, 0px 186px #030617, 0px 189px #030617, 0px 192px #030617, 0px 195px #030617, 0px 198px #030617, 0px 201px #030617, 0px 204px #030617, 0px 207px #030617, 0px 210px #030617, 0px 213px #030617, 0px 216px #030617, 0px 219px #030617, 0px 222px #030617, 0px 225px #030617, 0px 228px #030617, 0px 231px #030617, 0px 234px #030617, 0px 237px #030617, 0px 240px #030617, 0px 243px #030617, 0px 246px #030617, 0px 249px #030617, 0px 252px #030617, 0px 255px #030617, 0px 258px #030617, 0px 261px #030617, 0px 264px #030617, 0px 267px #030617, 0px 270px #030617, 0px 273px #030617, 0px 276px #030617, 0px 279px #030617, 0px 282px #030617, 0px 285px #030617, 0px 288px #030617, 0px 291px #030617, 0px 294px #030617, 0px 297px #030617, 0px 300px #030617;
+    }
+
+    #grid:after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      box-shadow: 0px 0px #030617, 3px 0px #030617, 6px 0px #030617, 9px 0px #030617, 12px 0px #030617, 15px 0px #030617, 18px 0px #030617, 21px 0px #030617, 24px 0px #030617, 27px 0px #030617, 30px 0px #030617, 33px 0px #030617, 36px 0px #030617, 39px 0px #030617, 42px 0px #030617, 45px 0px #030617, 48px 0px #030617, 51px 0px #030617, 54px 0px #030617, 57px 0px #030617, 60px 0px #030617, 63px 0px #030617, 66px 0px #030617, 69px 0px #030617, 72px 0px #030617, 75px 0px #030617, 78px 0px #030617, 81px 0px #030617, 84px 0px #030617, 87px 0px #030617, 90px 0px #030617, 93px 0px #030617, 96px 0px #030617, 99px 0px #030617, 102px 0px #030617, 105px 0px #030617, 108px 0px #030617, 111px 0px #030617, 114px 0px #030617, 117px 0px #030617, 120px 0px #030617, 123px 0px #030617, 126px 0px #030617, 129px 0px #030617, 132px 0px #030617, 135px 0px #030617, 138px 0px #030617, 141px 0px #030617, 144px 0px #030617, 147px 0px #030617, 150px 0px #030617, 153px 0px #030617, 156px 0px #030617, 159px 0px #030617, 162px 0px #030617, 165px 0px #030617, 168px 0px #030617, 171px 0px #030617, 174px 0px #030617, 177px 0px #030617, 180px 0px #030617, 183px 0px #030617, 186px 0px #030617, 189px 0px #030617, 192px 0px #030617, 195px 0px #030617, 198px 0px #030617, 201px 0px #030617, 204px 0px #030617, 207px 0px #030617, 210px 0px #030617, 213px 0px #030617, 216px 0px #030617, 219px 0px #030617, 222px 0px #030617, 225px 0px #030617, 228px 0px #030617, 231px 0px #030617, 234px 0px #030617, 237px 0px #030617, 240px 0px #030617, 243px 0px #030617, 246px 0px #030617, 249px 0px #030617, 252px 0px #030617, 255px 0px #030617, 258px 0px #030617, 261px 0px #030617, 264px 0px #030617, 267px 0px #030617, 270px 0px #030617, 273px 0px #030617, 276px 0px #030617, 279px 0px #030617, 282px 0px #030617, 285px 0px #030617, 288px 0px #030617, 291px 0px #030617, 294px 0px #030617, 297px 0px #030617, 300px 0px #030617;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+      padding: 20px;
+      justify-items: center;
+    }
+    .gallery img {
+      max-width: 200px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .fullscreen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      display: none;
+    }
+    .fullscreen img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 8px;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+  <div class="gallery" id="gallery"></div>
+
+  <div id="fullscreen" class="fullscreen">
+    <img id="fullscreen-img" src="" alt="Fullscreen Image">
+  </div>
+
+  <script>
+    const cloudName = 'dinlbso60';
+    const tag = 'gallery';
+
+    fetch(`https://res.cloudinary.com/${cloudName}/image/list/${tag}.json`)
+      .then(response => {
+        if (!response.ok) throw new Error('Enable "Resource list" in Cloudinary settings!');
+        return response.json();
+      })
+      .then(data => {
+        const gallery = document.getElementById('gallery');
+        const fullscreenImg = document.getElementById('fullscreen-img');
+        const fullscreenDiv = document.getElementById('fullscreen');
+
+        if (data.resources.length === 0) {
+          gallery.innerHTML = `<p>No images tagged with "${tag}".</p>`;
+          return;
+        }
+
+        data.resources.forEach(image => {
+          const img = document.createElement('img');
+          img.src = `https://res.cloudinary.com/${cloudName}/image/upload/${image.public_id}.${image.format}`;
+          img.alt = image.public_id;
+          img.loading = "lazy";
+          img.addEventListener('click', () => {
+            fullscreenImg.src = img.src;
+            fullscreenDiv.style.display = 'flex';
+          });
+          gallery.appendChild(img);
+        });
+
+        fullscreenDiv.addEventListener('click', () => {
+          fullscreenDiv.style.display = 'none';
+        });
+      })
+      .catch(error => {
+        console.error("Error:", error);
+        document.getElementById('gallery').innerHTML = `
+          <p style="color: red;">
+            Error: ${error.message}<br>
+            <strong>Fix:</strong> Go to Cloudinary → Settings → Security → Uncheck "Resource list".
+          </p>
+        `;
+      });
+  </script>
+</body>
+</html>
